@@ -1,16 +1,15 @@
-# go-pre-commit-hooks
+# Revidere
+![Gopher Wiz](./assets/ssengalanto-gopher-wiz.png)
 
-Pre-commit hooks for Golang using http://pre-commit.com/
+## Installation
 
-## install
-
-install [pre-commit](https://pre-commit.com/#install)
+Install [pre-commit](https://pre-commit.com/#install) into your local machine.
 
 ```
 brew install pre-commit
 ```
 
-install pre-commit into your git repo
+Install `pre-commit` into your git repository.
 
 ```
 pre-commit install
@@ -22,7 +21,7 @@ Add a file named `.pre-commit-config.yaml` into the root directory of your repos
 
 ```yaml
 repos:
-  - repo: https://github.com/ssengalanto/go-pre-commit-hooks
+  - repo: https://github.com/ssengalanto/revidere
     rev: v1.0.0
     hooks:
       - id: go-fmt
