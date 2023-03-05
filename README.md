@@ -1,4 +1,5 @@
 # Revidere
+
 ![Gopher Wiz](./assets/ssengalanto-gopher-wiz.png)
 
 ## Installation
@@ -17,7 +18,7 @@ pre-commit install
 
 ## Usage
 
-Add a file named `.pre-commit-config.yaml` into the root directory of your repository
+Add a file named `.pre-commit-config.yaml` into the root directory of your repository.
 
 ```yaml
 repos:
@@ -25,7 +26,9 @@ repos:
     rev: v1.0.0
     hooks:
       - id: go-fmt
+      - id: go-imports
       - id: go-vet
+      - id: go-build
       - id: go-test
       - id: go-mod-tidy
       - id: golangci-lint # requires github.com/golangci/
