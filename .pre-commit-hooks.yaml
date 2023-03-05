@@ -1,35 +1,49 @@
 - id: go-fmt
-  name: 'go fmt'
+  name: "go fmt"
   entry: run-go-fmt.sh
   files: '\.go$'
-  language: 'script'
+  language: "script"
   description: "Runs `gofmt`, it requires golang"
 
+- id: go-imports
+  name: "go imports"
+  entry: run-go-imports.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `goimports`, it requires goimports"
+
 - id: go-vet
-  name: 'go vet'
+  name: "go vet"
   entry: run-go-vet.sh
   files: '\.go$'
-  language: 'script'
+  language: "script"
   description: "Runs `go vet`, it requires golang"
 
 - id: golangci-lint
-  name: 'golangci-lint'
+  name: "golangci-lint"
   entry: run-golangci-lint.sh
   types: [go]
-  language: 'script'
+  language: "script"
   pass_filenames: false
   description: "Runs `golangci-lint`, it requires https://github.com/golangci/golangci-lint"
 
 - id: go-test
-  name: 'go-test'
+  name: "go-test"
   entry: run-go-test.sh
   files: '\.go$'
-  language: 'script'
+  language: "script"
   description: "Runs `go test`, it requires golang"
 
 - id: go-mod-tidy
-  name: 'go-mod-tidy'
+  name: "go-mod-tidy"
   entry: run-go-mod-tidy.sh
   files: '\.go$'
-  language: 'script'
+  language: "script"
   description: "Runs `go mod tidy -v`, it requires golang"
+
+- id: go-build
+  name: "go-build"
+  entry: run-go-build.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go build`, it requires golang"
